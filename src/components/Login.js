@@ -22,11 +22,9 @@ class Login extends React.Component {
 		if (this.state.login) {
 			const result = await this.props.authenticateUserMutation({
 				variables: { email, password }
-				// variables: {
-				// 	email: { email, password }
-				// }
 			});
-			const { id, token } = result.data.authenticateuser;
+			console.log('---->', result.data);
+			const { id, token } = result.data.authenticateUser;
 			this._saveUserData(id, token);
 		} else {
 			const result = await this.props.signupUserMutation({
@@ -104,10 +102,8 @@ const AUTHENTICATE_USER_MUTATION = gql`
 			email: $email,
 			password: $password
 		) {
+			id
 			token
-			user {
-				id
-			}
 		}
 	}
 `;
