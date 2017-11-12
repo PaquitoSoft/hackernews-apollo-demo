@@ -21,6 +21,8 @@ class Header extends React.Component {
 							<Link to='/create' className="ml1 no-underline black">submit</Link>
 						</div>
 					}
+					<div className="ml1">|</div>
+					<Link to="/search" className="ml1 no-underline black">search</Link>
 				</div>
 				<div className="flex flex-fixed">
 					{
