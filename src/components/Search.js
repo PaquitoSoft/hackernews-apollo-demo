@@ -2,7 +2,7 @@ import React from 'react';
 import { withApollo } from 'react-apollo';
 import gql from 'graphql-tag';
 import Link from './Link';
-import graphql from 'react-apollo/graphql';
+// import graphql from 'react-apollo/graphql';
 
 class Search extends React.Component {
 
